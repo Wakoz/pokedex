@@ -1,13 +1,16 @@
 import "./App.css";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import MyTitle from "./components/MyTitle";
 import PokemonCard from "./components/PokemonCard";
 import NavBar from "./components/Navbar";
 
-
 function App() {
   const [pokemonIndex, setPokemonIndex] = useState(0);
-	
+
+  useEffect(() => {
+    alert("Hello pokemon trainer :)");
+  }, []);
+
   const pokemonList = [
 		{
 			name: "Bulbasaur",
@@ -33,11 +36,12 @@ function App() {
 			name: "Mew",
 			imgSrc: "",
 		}
-
-    
 	];
 
   const handleSelectPokemon = (index) => {
+    if (pokemonList[index].name === "Pikachu"){
+      alert("Pika Pikachu !!!");
+    }
     setPokemonIndex(index);
   };
 
