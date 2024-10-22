@@ -2,6 +2,7 @@ import "./App.css";
 import { useState } from "react";
 import MyTitle from "./components/MyTitle";
 import PokemonCard from "./components/PokemonCard";
+import NavBar from "./components/Navbar";
 
 
 function App() {
@@ -14,17 +15,17 @@ function App() {
 				"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
 		},
     {
-      name: "charmander",
+      name: "Charmander",
       imgSrc:
         "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
     },
     {
-      name: "squirtle",
+      name: "Squirtle",
       imgSrc:
         "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
     },
     {
-      name: "pikachu",
+      name: "Pikachu",
       imgSrc:
         "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
     },
@@ -53,11 +54,10 @@ function App() {
 				<PokemonCard name = {pokemonList[pokemonIndex].name} imgSrc ={ pokemonList[pokemonIndex].imgSrc} />
       </div>
       <div>
-        <button onClick = {handlePrevious}> Précédent</button>
-        <button onClick = {handleNext}> Suivant</button>
+        <NavBar handlePrevious = {handlePrevious} handleNext = {handleNext} />
       </div>
 		</section>
-  )
+  );
 }
 
 export default App;
