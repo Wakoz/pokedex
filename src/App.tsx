@@ -36,17 +36,11 @@ function App() {
 
     
 	];
-  const handlePrevious = () => {
-    setPokemonIndex((prevIndex) => 
-    prevIndex === 0 ? prevIndex : prevIndex - 1
-  );
+
+  const handleSelectPokemon = (index) => {
+    setPokemonIndex(index);
   };
 
-  const handleNext = () => {
-    setPokemonIndex ((prevIndex) =>
-    prevIndex === pokemonList.length - 1 ? prevIndex : prevIndex + 1
-  );
-  };
 	return (
 		<section> 
 			<MyTitle />
@@ -54,10 +48,9 @@ function App() {
 				<PokemonCard name = {pokemonList[pokemonIndex].name} imgSrc ={ pokemonList[pokemonIndex].imgSrc} />
       </div>
       <div>
-        <NavBar handlePrevious = {handlePrevious} handleNext = {handleNext} />
+        <NavBar pokemonList = {pokemonList} handleSelectPokemon = {handleSelectPokemon} />
       </div>
 		</section>
   );
 }
-
 export default App;
