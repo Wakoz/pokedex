@@ -1,10 +1,11 @@
 interface PokemonCardProps {
 	name: string;
 	imgSrc?: string;
+	className: string;
 }
-function PokemonCard({ name, imgSrc }: PokemonCardProps) {
+function PokemonCard({ name, imgSrc, className }: PokemonCardProps) {
 	return (
-		<figure>
+		<figure className={className}> 
 			{imgSrc ? (
 				<img src={imgSrc} alt={name} />
 			) : (
@@ -12,7 +13,7 @@ function PokemonCard({ name, imgSrc }: PokemonCardProps) {
 			)}
 			<figcaption>{name}</figcaption>
 		</figure>
-	);
-}
+		)
+	}
 
 export default PokemonCard;

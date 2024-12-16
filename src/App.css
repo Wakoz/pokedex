@@ -18,6 +18,34 @@
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
 
+.card-red{
+  background-color: #f8d7da;
+  border: 2px solid #f5c6cb;
+}
+
+.card-blue {
+  background-color: #d1ecf1;
+  border: 2px solid #bee5eb;
+}
+
+.card-yellow {
+  background-color: #fff3cd;
+  border: 2px solid #ffeeba;
+}
+
+.card-green{
+  background-color: #d4edda;
+  border: 2px solid #c3e6cb;
+}
+
+.card-red figcaption,
+.card-blue figcaption,
+.card-green figcaption,
+.card-yellow figcaption {
+  color: #000000; /* Noir pour un contraste maximal */
+  font-weight: bold; /* Facultatif, pour rendre le texte plus visible */
+}
+
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
